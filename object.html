@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // membuat construture function harus di awali huruf kapital/besar
+      //   function Person() {
+      //     this.firstName = "";
+      //     this.lastName = "";
+      //     this.sayHello = function (name) {
+      //       console.info(`Hello ${name}, my name is ${this.firstName} `);
+      //     };
+      //   }
+
+      //   const muhamad = new Person();
+      //   muhamad.firstName = "muhamad";
+      //   muhamad.lastName = "maira";
+      //   muhamad.sayHello = "siregar";
+      //   const farhan = new Person();
+      //   farhan.firstName = "muhamad";
+      //   farhan.lastName = "farhan";
+      //   farhan.sayHello = "hutabarat";
+
+      //menggunakan parameter
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName} `);
+        };
+      }
+
+      const muhamad = new Person("muhamad", "maira");
+      muhamad.sayHello = "siregar";
+      const farhan = new Person("muhamad", "farhan");
+      farhan.sayHello = "hutabarat";
+
+      console.log(muhamad);
+      console.log(farhan);
+    </script>
+  </body>
+</html>

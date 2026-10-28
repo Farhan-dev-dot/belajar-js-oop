@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        sayHello(name) {
+          console.info(`Hi ${name}, my name is employee ${this.name}`);
+        }
+      }
+      class Manager extends Employee {
+        sayHello(name) {
+          console.info(`Hi ${name}, my name is manager s${this.name}`);
+        }
+      }
+
+      const farhan = new Employee();
+      farhan.name = "farhan";
+      farhan.sayHello("aidah");
+
+      console.info(farhan);
+      const maira = new Manager();
+      maira.name = "maira";
+      maira.sayHello("farhan");
+      console.info(maira);
+    </script>
+  </body>
+</html>

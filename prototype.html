@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //menggunakan parameter
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName} `);
+        };
+      }
+      const eko = new Person("Eko", "Khannedy");
+
+      //hanya menambahkan di eko tidak menambahkan di budi
+      //   eko.sayBye = function () {
+      //     console.log("say good bye");
+      //   };
+
+      const budi = new Person("Budi", "Nugraha");
+      //nah kalo untuk menambahkan semuanya kita menggunakan prototype
+
+      Person.prototype.sayBye = function () {
+        console.info("Good Bye");
+      };
+      Person.prototype.run = function () {
+        console.info(`${this.firstName} is running`);
+      };
+
+      console.log(eko);
+      console.log(budi);
+
+      eko.sayBye();
+      eko.run();
+    </script>
+  </body>
+</html>
